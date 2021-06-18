@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import balloons from "./images/balloons.jpg";
+import "./index.css";
+import { useGlobalContext } from "./context";
+import { Navbar } from "./components/Navbar";
+import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
+import { Countdown } from "./pages/Countdown";
+import { Quiz } from "./pages/Quiz";
+import { Presents } from "./pages/Presents";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <>
+        <Navbar />
+
+        <Switch>
+          <Route path="/" exact>
+            <Countdown />
+          </Route>
+          <Route path="/quiz">
+            <Quiz />
+          </Route>
+          <Route path="/presents">
+            <Presents />
+          </Route>
+          <Route path="/Countdown">
+            <Countdown />
+          </Route>
+          <Route path="*" />
+        </Switch>
+      </>
+    </Router>
   );
 }
 

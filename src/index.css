@@ -1,13 +1,166 @@
-body {
+/*
+=============== 
+Variables
+===============
+*/
+
+:root {
+  --pink-dark: #fec5bb;
+  --white: whitesmoke;
+  --gray: darkgrey;
+
+  --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  font-size: 0.875rem;
+  background-color: var(--pink-dark);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar {
+  background-color: var(--pink-dark);
+  color: var(--white);
+  height: 100px;
+  filter: drop-shadow(5px 5px 5px rgb(61, 57, 57));
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar h1 {
+  font-size: 30px;
+  font-family: "Kalam", cursive;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav__link {
+  color: whitesmoke;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: transparent;
+  margin-top: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+.section--center {
+  margin: 0 auto;
+  width: 800px;
+  height: 90vh;
+  background-color: var(--pink-dark);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+
+.input--presents {
+  padding: 10px 20px 10px 3px;
+  display: inline-block;
+  margin-top: 2rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 2px dashed gray;
+  margin-right: auto;
+  width: 300px;
+  color: var(--gray);
+  font-family: "Kalam", cursive;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.btn--presents {
+  padding: 10px 20px;
+}
+
+.present--container {
+  background-color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(5px 5px 5px rgb(61, 57, 57));
+}
+
+.item--container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.icon {
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.star {
+  font-size: 20px;
+  color: grey;
+}
+.star.active {
+  color: yellow;
+}
+
+.item {
+  font-size: 16px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  font-family: "Kalam", cursive;
+  line-height: 1.6rem;
+  letter-spacing: 1px;
+  color: var(--gray);
+}
+
+.form {
+  margin-top: 3rem;
+  background-color: white;
+  text-align: center;
+  min-width: 500px;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  color: var(--gray);
+}
+h2 {
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+button {
+  color: whitesmoke;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--pink-dark);
+  margin-top: 20px;
+  border: 2px solid whitesmoke;
+  border-radius: 8px;
+  font-family: "Kalam", cursive;
+  color: var(--gray);
 }
