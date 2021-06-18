@@ -15,7 +15,7 @@ function App() {
 
         <Switch>
           <Route path="/" exact>
-            <Countdown />
+            <Presents />
           </Route>
           <Route path="/quiz">
             <Quiz />
